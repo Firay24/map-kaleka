@@ -1,10 +1,11 @@
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCoordinate, mapSelectors } from "./mapSlice";
+import { useDispatch } from "react-redux";
+import { fetchCoordinate } from "./mapSlice";
 import { useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Circle, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { LatLngTuple } from "leaflet";
 import { useNavigate } from "react-router-dom";
+import { kabupaten } from "../../util/data";
 
 // const defaultCenter: LatLngTuple = [38.9072, -77.0369];
 const defaultCenter: LatLngTuple = [-6.8841, 107.5413];
@@ -14,22 +15,7 @@ const Beranda = () => {
   const dispatch = useDispatch();
   const mapRef = useRef<any>(null);
   const navigate = useNavigate();
-  const coordinates = useSelector(mapSelectors.selectAll);
-
-  const kabupaten = [
-    {
-      name: "bogor",
-      koordinat: [-6.5971, 106.806],
-    },
-    {
-      name: "bandung",
-      koordinat: [-6.8841, 107.5413],
-    },
-    {
-      name: "cirebon",
-      koordinat: [-6.732, 108.5523],
-    },
-  ];
+  // const coordinates = useSelector(mapSelectors.selectAll);
 
   useEffect(() => {
     dispatch(fetchCoordinate() as any);

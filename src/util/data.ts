@@ -11,3 +11,18 @@ export const visi = {
     "We aim to achieve our vision and mission through our four strategic initiatives.",
   ],
 };
+
+export const kabupaten = [
+  {
+    name: "bogor",
+    koordinat: [-6.5971, 106.806],
+  },
+  {
+    name: "bandung",
+    koordinat: [-6.8841, 107.5413],
+  },
+  {
+    name: "cirebon",
+    koordinat: [-6.732, 108.5523],
+  },
+];
