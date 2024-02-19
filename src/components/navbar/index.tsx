@@ -9,7 +9,7 @@ const Navbar = () => {
   ];
   let [open, setOpen] = useState(false);
   return (
-    <div className="md:p-6 p-8 bg-black flex items-center justify-center w-full fixed top-0 left-0">
+    <div className="md:p-6 p-8 bg-black flex items-center justify-center w-full fixed top-0 left-0 z-50">
       <div className="md:flex items-center">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center 

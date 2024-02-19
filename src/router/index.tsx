@@ -13,7 +13,7 @@ const AppRouter = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Page.Beranda />} />
         <Route path=":id" element={<Page.Detail />} />
-        <Route path=":id" element={<Page.Tentang />} />
+        <Route path="tentang" element={<Page.Tentang />} />
       </Route>
     )
   );
